@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="password-generator">
+        <h1>Generate a <span>random password</span></h1>
+        <h4>Never use an insecure password again!</h4>
+        <div class="settings">
+            <div class="setting-section">
+                Password length: <div class="char-num" id="display-numChar"></div><div class="char">18</div>Characters
+                <input type="range" name="charNum" id="el-charNum" value="18" min="4" max="64">
+            </div>
+            <div class="setting-section checkbox">
+                <input type="checkbox" id="lowercase" checked="checked"><label for="lowercase" class="lowerCase">Lowercase (abc)</label>
+            </div>
+            <div class="setting-section checkbox">
+                <input type="checkbox" id="uppercase" checked="checked"><label for="uppercase" class="upperCase">Uppercase (ABC)</label>                
+            </div>
+            <div class="setting-section checkbox">
+                <input type="checkbox" id="numbers" checked="checked"><label for="numbers" class="numbersCase">Numbers (123)</label>                
+            </div>
+            <div class="setting-section checkbox">
+                <input type="checkbox" id="symbols" checked="checked"><label for="symbols" class="symbolsCases">Randomized symbols (#$!)</label>                
+            </div>
+        </div>
+        <div class="result">
+            <div class="generated-password" ></div>
+            <div class="hidden-generated-password" ></div>
+            <div class="copy"><i class="fa-regular fa-copy"></i><span class="copied">Copied to clipboard</span></div>
+            <div class="retry"><i class="fa-sharp fa-solid fa-rotate"></i></div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/66ff231c87.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
