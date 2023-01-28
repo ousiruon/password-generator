@@ -93,28 +93,28 @@ function containsSpecialChar(psswdCheck) {
 }
 
 function checkedOptions () {
-    if (lowerCaseCheckbox.checked === true && containsLowercase(generatedPsswd) !== true){
+    while (lowerCaseCheckbox.checked === true && containsLowercase(generatedPsswd) !== true){
         for ( let i = 0 ; i < lowerCaseOnly.length ; i++) {
             randomNumberNum = Math.floor(Math.random() * lowerCaseOnly.length);
         }
         generatedPsswd = generatedPsswd.substring(1);
         generatedPsswd += lowerCaseOnly[randomNumberNum];
     }
-    if (upperCaseCheckbox.checked === true && containsUppercase(generatedPsswd) !== true){
+    while (upperCaseCheckbox.checked === true && containsUppercase(generatedPsswd) !== true){
         for ( let i = 0 ; i < upperCaseOnly.length ; i++) {
             randomNumberNum = Math.floor(Math.random() * upperCaseOnly.length);
         }
         generatedPsswd = generatedPsswd.substring(1);
         generatedPsswd += upperCaseOnly[randomNumberNum];
     }
-    if (numbersCheckbox.checked === true && containsNumbers(generatedPsswd) !== true){
+    while (numbersCheckbox.checked === true && containsNumbers(generatedPsswd) !== true){
         for ( let i = 0 ; i < numbersOnly.length ; i++) {
             randomNumberNum = Math.floor(Math.random() * numbersOnly.length);
         }
         generatedPsswd = generatedPsswd.substring(1);
         generatedPsswd += numbersOnly[randomNumberNum];
     }
-    if (symbolsCheckbox.checked === true && containsSpecialChar(generatedPsswd) !== true){
+    while (symbolsCheckbox.checked === true && containsSpecialChar(generatedPsswd) !== true){
         for ( let i = 0 ; i < symbolsOnly.length ; i++) {
             randomNumberNum = Math.floor(Math.random() * symbolsOnly.length);
         }
